@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <section class="expenses">
+            <div class="container">
+                <div class="expenses__header">
+                    <div class="express__header-buttons grey">
+                        <button>Период: <span>2014</span></button>
+                        <button>Филиал: <span>Все</span></button>
+                        <button>Регион: <span>Все</span></button>
+                        <button>Юрист: <span>Все</span></button>
+                    </div>
+                    <div class="expenses__header-save">
+                        <div class="expenses__header-save__title grey">
+                            Сохранить отчёт
+                        </div>
+                        <div class="expenses__header-save__links">
+                            <a href="#" class="expenses__header-save__links-item">
+                                XLS
+                            </a>
+                            <a href="#" class="expenses__header-save__links-item">
+                                CSV
+                            </a>
+                            <a href="#" class="expenses__header-save__links-item">
+                                PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="expenses__content">
+                    <div class="expenses__content-header">
+                        <div class="expenses__content-header__title section-title">
+                            Расходы
+                        </div>
+                        <div class="expenses__content-header__links">
+                            <a href="#" class="expenses__content-header__links-item">
+                                Квартал
+                            </a>
+                            <a href="#" class="expenses__content-header__links-item active">
+                                Месяц
+                            </a>
+                        </div>
+                    </div>
+                    <div class="expenses__content-chart">
+                        <div class="chart-container">
+                            <canvas id="bars-diagram"></canvas>
+                        </div>
+                    </div>
+                    <table class="expenses__content-legend">
+                        <tbody>
+                            <tr class="grey">
+                                <td align="left">Расходы</td>
+                                <td align="right">Сумма по искам</td>
+                                <td align="center">Исков</td>
+                                <td align="right">Снижение требований</td>
+                                <td align="right">Итоговая сумма</td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex" align="left">
+                                    <span class="colored-square mr-8px" style="background: aqua"></span>
+                                    <span>Моральный вред</span>
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">5,45 %</span>
+                                    9 544 853 &#8381;
+                                </td>
+                                <td align="center">
+                                    1287
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">8 336 592 &#8381;</span>
+                                    87,31 %
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">2,01 %</span>
+                                    1 208 261 &#8381;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex" align="left">
+                                    <span class="colored-square mr-8px" style="background: aqua"></span>
+                                    <span>Моральный вред</span>
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">5,45 %</span>
+                                    9 544 853 &#8381;
+                                </td>
+                                <td align="center">
+                                    1287
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">8 336 592 &#8381;</span>
+                                    87,31 %
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">2,01 %</span>
+                                    1 208 261 &#8381;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex" align="left">
+                                    <span class="colored-square mr-8px" style="background: aqua"></span>
+                                    <span>Моральный вред</span>
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">5,45 %</span>
+                                    9 544 853 &#8381;
+                                </td>
+                                <td align="center">
+                                    1287
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">8 336 592 &#8381;</span>
+                                    87,31 %
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">2,01 %</span>
+                                    1 208 261 &#8381;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex" align="left">
+                                    <span class="colored-square mr-8px" style="background: aqua"></span>
+                                    <span>Моральный вред</span>
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">5,45 %</span>
+                                    9 544 853 &#8381;
+                                </td>
+                                <td align="center">
+                                    1287
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">8 336 592 &#8381;</span>
+                                    87,31 %
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">2,01 %</span>
+                                    1 208 261 &#8381;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex" align="left">
+                                    <span class="colored-square mr-8px" style="background: aqua"></span>
+                                    <span>Моральный вред</span>
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">5,45 %</span>
+                                    9 544 853 &#8381;
+                                </td>
+                                <td align="center">
+                                    1287
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">8 336 592 &#8381;</span>
+                                    87,31 %
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">2,01 %</span>
+                                    1 208 261 &#8381;
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 0.7px solid rgba(0, 0, 0, .3);">
+                                <td colspan="100%"></td>
+                            </tr>
+                            <tr>
+                                <td align="left">
+                                    <strong>Итого</strong>
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">100 %</span>
+                                    175 188 077 &#8381;
+                                </td>
+                                <td align="center">
+                                    1417
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">115 176 907 &#8381;</span>
+                                    65,74 %
+                                </td>
+                                <td align="right">
+                                    <span class="grey mr-8px">100 %</span>
+                                    60 011 170 &#8381;
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
