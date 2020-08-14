@@ -5,6 +5,12 @@
 body {
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-grey {
+    background-color: #edf2f5;
 }
 
 .grey {
@@ -31,8 +37,7 @@ a {
 }
 
 .expenses {
-    background-color: #EDF2F5;
-    padding-bottom: 32px;
+    margin-bottom: 28px;
 }
 
 .expenses__header {
@@ -40,6 +45,7 @@ a {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 25px;
+    position: relative;
 }
 
 .express__header-buttons {
@@ -70,15 +76,6 @@ a {
     margin-right: 5px;
 }
 
-.express__header-buttons > button {
-    -webkit-box-shadow: 0px 6.5px 5px -4px rgba(135,128,135,0.52);
-    -moz-box-shadow: 0px 6.5px 5px -4px rgba(135,128,135,0.52);
-    box-shadow: 0px 6.5px 5px -4px rgba(135,128,135,0.52);
-    background-color: #fff;
-    border: 0;
-    padding: 6px 4px 6px 5px;
-}
-
 .express__header-buttons > button > span {
     color: black;
 }
@@ -93,14 +90,13 @@ a {
 .expenses__content-header {
     display: flex;
     align-items: center;
-    padding-left: 15px;
     padding-right: 15px;
     margin-bottom: 25px;
+    padding-left: 15px;
 }
 
 .section-title {
     font-weight: bold;
-    font-family: Consolas, serif;
     font-size: 25px;
 }
 
@@ -116,6 +112,23 @@ a {
 .expenses__content-header__links-item.active {
     color: black;
     background-color: rgb(210,228,233);
+}
+
+.expenses__header-buttons-item {
+    -webkit-box-shadow: 0px 6.5px 5px -4px rgba(135,128,135,0.52);
+    -moz-box-shadow: 0px 6.5px 5px -4px rgba(135,128,135,0.52);
+    box-shadow: 0px 6.5px 5px -4px rgba(135,128,135,0.52);
+    background-color: #fff;
+    padding: 6px 4px 6px 5px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 7px;
 }
 
 span.colored-square {
@@ -146,7 +159,91 @@ span.colored-square {
 .expenses__content-legend > tbody td {
     border-right: 35px solid;
     border-color: transparent;
+    font-size: 20px;
 }
+
+.express__header-buttons__selectors {
+    display: flex;
+    max-width: 360px;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.budget {
+    margin-bottom: 28px;
+}
+
+.budget__content {
+    background: white;
+    padding: 15px 15px 25px;
+}
+
+.percent-line {
+    position: relative;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.percent-line > div:first-child {
+    position: absolute;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    top: 0;
+    right: 0;
+}
+
+.budget__content-diagram {
+    margin-top: 20px;
+}
+
+.budget__content-legend {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.budget__content-legend-item {
+    margin-right: 25px;
+}
+
+
+.claim-statistic {
+    margin-bottom: 28px;
+}
+
+.claim-statistic__content {
+    background-color: #fff;
+    padding: 15px 15px 25px;
+}
+
+.claim-statistic__content-legend {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.claim-statistic__content-legend-item {
+    width: 47.5%;
+}
+
+.claim-statistic__content-legend-item__bar {
+    display: flex;
+    align-items: center;
+}
+
+.claim-statistic__content-legend-item__bar-diagram {
+    width: 50%;
+    margin-right: 15px;
+}
+
+.claim-statistic__content-legend-item__bar > .grey {
+    margin-right: 15px;
+}
+
 
 @media (max-width: 990px) {
     .expenses__content-legend > tbody td {
@@ -157,7 +254,7 @@ span.colored-square {
 
 @media (max-width: 792px) {
     .expenses__content-legend > tbody {
-        width: 750px !important;
+        width: 940px !important;
         display: block;
     }
 
@@ -166,6 +263,15 @@ span.colored-square {
         display: block;
         border: 1px solid black;
         overflow-x: scroll;
+    }
+
+    .claim-statistic__content-legend-item {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .claim-statistic__content-legend {
+        justify-content: center;
     }
 }
 
@@ -176,6 +282,41 @@ span.colored-square {
 
     .expenses__header-save {
         margin-top: 25px;
+    }
+
+    .budget__content-legend {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .budget__content-legend-item {
+        width: 50%;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 550px) {
+    .budget__content-legend {
+        width: 70%;
+        padding-left: 20%;
+    }
+
+    .budget__content-legend-item {
+        width: 100%;
+    }
+
+    .budget__content-legend-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .claim-statistic__content-legend-item__bar {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .claim-statistic__content-legend-item__bar-diagram {
+        width: 100%;
     }
 }
 
@@ -189,5 +330,10 @@ span.colored-square {
         width: 100%;
         display: block;
         overflow-x: scroll;
+    }
+    
+    .expenses__content-header__links {
+        display: flex;
+        flex-direction: column;
     }
 }
