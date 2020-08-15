@@ -221,6 +221,7 @@ span.colored-square {
 
 .claim-statistic__content-legend {
     display: flex;
+    margin-top: 25px;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -242,6 +243,77 @@ span.colored-square {
 
 .claim-statistic__content-legend-item__bar > .grey {
     margin-right: 15px;
+}
+
+.lawyer-statistic {
+    margin-bottom: 28px;
+}
+
+.lawyer-statistic__content {
+    padding: 15px 15px 25px;
+    background-color: #fff;
+}
+
+.statistic-table__col-title {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.statistic-table {
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.statistic-table tr {
+    border-top: 10px solid transparent;
+}
+
+.statistic-table td {
+    border-right: 10px solid transparent;
+}
+
+.statistic-table tr:first-child {
+    border-top: 13px solid transparent;
+}
+
+.statistic-table > tbody {
+    width: 100%;
+}
+
+.num-border {
+    width: 100%;
+    max-width: 115px;
+}
+
+.num-border__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.statistic-table__text-secondary {
+    font-size: 15px;
+}
+
+.btn-load-more {
+    background-color: transparent;
+    color: #0080CC;
+    display: block;
+    width: 100%;
+    border: 2px solid #67B3E0;
+    padding: 1vh;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.region-statistic__content {
+    background-color: #fff;
+    padding: 15px 15px 25px;
 }
 
 
@@ -272,6 +344,18 @@ span.colored-square {
 
     .claim-statistic__content-legend {
         justify-content: center;
+    }
+
+    .statistic-table > tbody {
+        display: block !important;
+        width: 700px !important;
+    }
+
+    .statistic-table {
+        display: block;
+        width: 100%;
+        border: 1px solid black;
+        overflow-x: scroll;
     }
 }
 
